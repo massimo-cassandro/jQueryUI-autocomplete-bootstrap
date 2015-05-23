@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery UI autocomplete for Bootstrap Demo</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="jqueryui-autocomplete-bootstrap.css" type="text/css" media="all">
+</head>
+<body>
+	<div class="container">
+		<h1>jQuery UI autocomplete for Bootstrap Demo</h1>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="ac-demo" class="control-label">Autocomplete demo</label>
+					<input
+						class="form-control bs-autocomplete"
+						id="ac-demo"
+						value=""
+						placeholder="Type the first two characters of a city name..."
+						type="text"
+						data-source="demo_source.php"
+						data-hidden_field_id="city-code"
+						data-item_id="id"
+						data-item_label="cityName"
+						autocomplete="off"
+					>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="form-group">
+					<label for="city-code" class="control-label">“Hidden” field</label>
+					<input class="form-control" id="city-code" name="citycode" value="" type="number" readonly>
+					<span class="help-block">This field should be hidden!</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--
+	you don't need this for this demo
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	-->
+
+	<!--
+		NOTE:
+		this demo doesn't use the minified version of the jqueryui-autocomplete-bootstrap.js script
+		and needs some jQuery UI files not included in this repository.
+		Use the minified version or download all file from the jQuery UI site.
+
+		<script type="text/javascript" src="jqueryui-autocomplete-bootstrap-min.js"></script>
+	-->
+	<script type="text/javascript" src="../jquery-ui-master/ui/core.js"></script>
+	<script type="text/javascript" src="../jquery-ui-master/ui/widget.js"></script>
+	<script type="text/javascript" src="../jquery-ui-master/ui/position.js"></script>
+	<script type="text/javascript" src="../jquery-ui-master/ui/autocomplete.js"></script>
+	<script type="text/javascript" src="../jquery-ui-master/ui/menu.js"></script>
+
+	<script type="text/javascript" src="jqueryui-autocomplete-bootstrap.js"></script>
+
+</body>
+</html>
